@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:alpha=".90"
-    android:background="@drawable/background"
+    android:background="@drawable/bkkkkk"
     android:focusable="true"
     android:focusableInTouchMode="true"
     tools:context="com.kvikesh800gmail.relativlayoutjava.MainActivity">
@@ -13,11 +13,11 @@
 
     <ImageView
         android:id="@+id/image_icon"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:scaleType="centerCrop" />
+        android:layout_marginTop="30dp"
+       />
 
     <TextView
         android:id="@+id/welcome_name"
@@ -26,9 +26,11 @@
         android:layout_below="@id/image_icon"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:visibility="invisible"
         android:layout_marginTop="30dp"
         android:maxLength="15"
         android:text="Welcome !"
+        android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="30sp" />
@@ -40,10 +42,10 @@
         android:layout_below="@id/welcome_name"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="0dp"
         android:maxLength="15"
         android:textAlignment="center"
-        android:textColor="#43c7d6"
+        android:textColor="#fff"
         android:textSize="30sp" />
 
     <RelativeLayout
@@ -81,6 +83,10 @@
 
     </RelativeLayout>
 
+
+
+
+
     <TextView
         android:id="@+id/forget"
         android:layout_width="wrap_content"
@@ -91,7 +97,7 @@
         android:onClick="showDialog"
         android:layout_marginTop="5dp"
         android:text="Forgot Password !!"
-        android:textColor="#AAFAC8"
+        android:textColor="#000"
         android:textStyle="bold" />
 
         <Button

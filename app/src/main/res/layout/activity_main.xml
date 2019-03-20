@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:alpha=".90"
-    android:background="@drawable/background"
+    android:background="@drawable/bkkkkk"
     android:focusable="true"
     android:focusableInTouchMode="true"
     tools:context="com.kvikesh800gmail.relativlayoutjava.MainActivity">
@@ -12,13 +12,13 @@
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/question" />
+        android:background="@drawable/logoo" />
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -38,9 +38,11 @@
         android:drawablePadding="15dp"
         android:hint="Name"
         android:maxLength="15"
+
         android:maxLines="1"
         android:textColor="#FF53C39A"
         android:textColorHint="#fff"
+
         android:textSize="20sp" />
 <Spinner
     android:layout_width="0dp"

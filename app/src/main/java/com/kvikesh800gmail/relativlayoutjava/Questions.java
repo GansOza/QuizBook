@@ -4,14 +4,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +29,7 @@ public class Questions extends AppCompatActivity {
     TextView ques;
     Button OptA, OptB, OptC, OptD;
     Button play_button;
+    ImageView imageView;
     String get;
     //Objects of different classes
     books Books;
@@ -48,6 +52,7 @@ public class Questions extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        imageView = (ImageView) findViewById(R.id.bookgif);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -142,6 +147,7 @@ public class Questions extends AppCompatActivity {
             OptC.setVisibility(View.VISIBLE);
             OptD.setVisibility(View.VISIBLE);
             play_button.setVisibility(View.GONE);
+            imageView.setVisibility(View.GONE);
             donutProgress.setVisibility(View.VISIBLE);
             visibility = 1;
             new CountDownTimer(50000, 1000) {//countdowntimer
@@ -196,36 +202,73 @@ public class Questions extends AppCompatActivity {
             if (global.equals("A")) {
                 if (v.getId() == R.id.OptionA) {
                     //Here we use the snackbar because if we use the toast then they will be stacked an user cannot idetify which questions answer is it showing
-                    Snackbar.make(v, "         Correct ☺", Snackbar.LENGTH_SHORT).show();
-
+                    // Snackbar.make(v, "         Correct ☺", Snackbar.LENGTH_SHORT).show();
+                    Snackbar snackbar =  Snackbar.make(v, "  Correct ", Snackbar.LENGTH_SHORT)
+                            .setAction("Action", null);
+                    View sbView = snackbar.getView();
+                    sbView.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.rightColor));
+                    snackbar.show();
                     l++;
                 } else {
-                    Snackbar.make(v, "Incorrect\t      Answer :" + Opta + "", Snackbar.LENGTH_SHORT).show();
+                    //Snackbar.make(v, "Incorrect\t      Answer :" + Opta + "", Snackbar.LENGTH_SHORT).show();
+
+
+                    Snackbar snackbar =Snackbar.make(v, "Incorrect Answer :" + Opta + "", Snackbar.LENGTH_SHORT)                           .setAction("Action", null);
+                    View sbView = snackbar.getView();
+                    sbView.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.wrongColor));
+                    snackbar.show();
+
+
+
                 }
 
             } else if (global.equals("B")) {
                 if (v.getId() == R.id.OptionB) {
-                    Snackbar.make(v, "          Correct ☺", Snackbar.LENGTH_SHORT).show();
+                    Snackbar snackbar =  Snackbar.make(v, "  Correct ", Snackbar.LENGTH_SHORT)
+                            .setAction("Action", null);
+                    View sbView = snackbar.getView();
+                    sbView.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.rightColor));
+                    snackbar.show();
                     l++;
                 } else {
-                    Snackbar.make(v, "Incorrect\t      Answer :" + Optb + "", Snackbar.LENGTH_SHORT).show();
+                    Snackbar snackbar =Snackbar.make(v, "Incorrect Answer :" + Optb + "", Snackbar.LENGTH_SHORT)                           .setAction("Action", null);
+                    View sbView = snackbar.getView();
+                    sbView.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.wrongColor));
+                    snackbar.show();
+
                 }
 
             } else if (global.equals("C")) {
                 if (v.getId() == R.id.OptionC) {
 
-                    Snackbar.make(v, "         Correct ☺", Snackbar.LENGTH_SHORT).show();
+                    Snackbar snackbar =  Snackbar.make(v, " Correct ", Snackbar.LENGTH_SHORT)
+                            .setAction("Action", null);
+                    View sbView = snackbar.getView();
+                    sbView.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.rightColor));
+                    snackbar.show();
                     l++;
                 } else {
-                    Snackbar.make(v, "Incorrect\tAnswer :" + Optc + "", Snackbar.LENGTH_SHORT).show();
+                    Snackbar snackbar =Snackbar.make(v, "Incorrect Answer :" + Optc + "", Snackbar.LENGTH_SHORT)                           .setAction("Action", null);
+                    View sbView = snackbar.getView();
+                    sbView.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.wrongColor));
+                    snackbar.show();
+
                 }
             } else if (global.equals("D")) {
                 if (v.getId() == R.id.OptionD) {
-                    Snackbar.make(v, "        Correct ☺", Snackbar.LENGTH_SHORT).show();
+                    Snackbar snackbar =  Snackbar.make(v, " Correct ", Snackbar.LENGTH_SHORT)
+                            .setAction("Action", null);
+                    View sbView = snackbar.getView();
+                    sbView.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.rightColor));
+                    snackbar.show();
                     l++;
                 } else {
 
-                    Snackbar.make(v, "Incorrect\tAnswer :" + Optd + "", Snackbar.LENGTH_SHORT).show();
+                    Snackbar snackbar =Snackbar.make(v, "Incorrect Answer :" + Optd + "", Snackbar.LENGTH_SHORT)                           .setAction("Action", null);
+                    View sbView = snackbar.getView();
+                    sbView.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.wrongColor));
+                    snackbar.show();
+
                 }
             }
         }

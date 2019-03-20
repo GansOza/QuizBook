@@ -25,7 +25,7 @@ public class AboutUs extends AppCompatActivity {
             public void onClick(View v) {
 
                 //Use when user trigger on  visit website
-                String url = "https://www.kvikesh800.wixsite.com/learner";
+                String url = "http://www.customsoftwaresolutions.co.in/index.html";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 Intent chooser = Intent.createChooser(intent, "Open with");

@@ -121,6 +121,15 @@
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/bookgif"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/vec"/>
+
     <Button
         android:id="@+id/play_button"
         android:layout_width="200dp"

@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="#3A789E"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -29,16 +29,17 @@
         android:orientation="vertical"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/bkkkkk"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:background="#29b4b4"
+            android:background="#fff"
             android:layout_height="wrap_content" >
             <ImageView
                 android:layout_width="match_parent"
                 android:padding="100dp"
                 android:layout_height="190dp"
-                android:src="@drawable/question"
+                android:src="@drawable/logoo"
                 android:id="@+id/i"
                 android:layout_gravity="center_horizontal"
                 android:scaleType="centerCrop"/>
@@ -46,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
-                android:text="QuizBook"
+                android:text="Lets Learn"
                 android:layout_below="@+id/i"
                 android:id="@+id/q"
                 android:layout_centerHorizontal="true"
@@ -66,6 +67,7 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:gravity="center"
+            android:textColor="#fff"
             android:text="@string/note"
             android:layout_margin="10dp" />
 
@@ -74,8 +76,8 @@
                 android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
                 android:text="Visit Website"
-                android:textColor="#56a15a"
-                android:background="?attr/selectableItemBackground"
+                android:textColor="#fff"
+                android:background="#56a15a"
                 android:id="@+id/visit_website"/>
 
     </LinearLayout>

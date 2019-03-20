@@ -30,7 +30,7 @@ public class Result extends AppCompatActivity {
         attempted.setText("  " + attempt);
         correct.setText("  " + cor);
         incorrect.setText("  " + incorr);
-        score.setText("Score  :    " + scor);
+        score.setText("Score  %:    " + scor);
         float x1 = (cor * 100) / attempt;
         if (x1 < 40)
             you.setText("You Need Improvement");
